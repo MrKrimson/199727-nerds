@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <header class="shop-headerq">
+    <header class="page-header">
       <div class="container">
         <div class="header-top">
           <a class="header-logo" href="#"></a>
@@ -14,20 +14,150 @@
               <ul class="header-menu-list">
                 <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <a class="header-cart" href="#"></a>
+            <a class="header-cart" href="#">Корзина</a>
           </div>
         </div>
-        <div class="shop-title">
+        <div class="header-title">
           <h1>Добро пожаловать в магазин готовых макетов</h1>
         </div>
       </div>
     </header>
     <main class="container">
-
+      <!--Нужно ли оборачивать форму и товары в общий section?
+      или в два разных sectiona? или вообще не надо?-->
+      <form class="shop-form" action="index.html" method="post">
+        <!--на вебинари упоминали теги legend и fieldset,
+        не лучше ли их тут использовать, и если да то как?
+        h2 сказали не очень подходят...-->
+        <div class="shop-form-filter">
+          <h2>Стоимость:</h2>
+          <div class="slider">
+            <div class="slider-background">
+              <div class="slider-active-line">
+                <div class="slider-inactive-line"></div> <!--или и той и другой лини задать класс slider-line, а второму добавить еще один класс "active"?-->
+                <div class="circle min"></div> <!--добавил второй класс, правильно? или хватит одного одинакового? или вообще два разных класса надо?-->
+                <div class="circle max"></div>
+              </div>
+            </div>
+          </div>
+          <div class="shop-form-range">
+            <input type="text" name="name" value="0" id="min">
+            <label for="min">от</label>
+            <input type="text" name="name" value="15000" id="max">
+            <label for="max">до</label>
+          </div>
+        </div>
+        <div class="shop-form-groups">
+          <h2>Сетка:</h2>
+          <ul class="shop-form-groups-list"> <!--нужны ли классы для ul и li? на всякий случай сделал. Для radio и checkbox одинаковые, правильно?-->
+            <li class="shop-form-groups-item">
+              <input type="radio" name="radio-item" value="radio-item1" id="radio-point1"> <!--Можно ли обернуть input в label, что бы не задавать id? или id и все равно будет нужен для других задач?-->
+              <label for="point1">Адаптивная</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="radio" name="radio-item" value="radio-item2" id="radio-point2">
+              <label for="point2">Фиксированная</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="radio" name="radio-item" value="radio-item3" id="radio-point3">
+              <label for="point3">Резиновая</label>
+            </li>
+          </ul>
+        </div>
+        <div class="shop-form-groups">
+          <h2>Особенности:</h2>
+          <ul class="shop-form-groups-list">
+            <li class="shop-form-groups-item">
+              <input type="checkbox" name="checkbox-item1" id="chekbox-point1">
+              <label for="chekbox-point1">Слайдер</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="checkbox" name="checkbox-item2" id="chekbox-point2">
+              <label for="chekbox-point2">Блок преимуществ</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="checkbox" name="checkbox-item3" id="chekbox-point3">
+              <label for="chekbox-point3">Новости</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="checkbox" name="checkbox-item4" id="chekbox-point4">
+              <label for="chekbox-point4">Галерея</label>
+            </li>
+            <li class="shop-form-groups-item">
+              <input type="checkbox" name="checkbox-item5" id="chekbox-point5">
+              <label for="chekbox-point5">Корзина</label>
+            </li>
+          </ul>
+        </div>
+        <input class="btn" type="submit" value="Показать">
+      </form>
+      <div class="shop-sort">
+        <ul class="shop-sort-list">
+          <li class="shop-sort-title">Сортировать:</li> <!--нужно ли еще в span обернуть или li достаточно?-->
+          <li class="shop-sort-item"><a href="#">По цене</a></li>
+          <li class="shop-sort-item"><a href="#">По типу</a></li>
+          <li class="shop-sort-item"><a href="#">По функционалу</a></li>
+        </ul>
+       <!--Кнопочки надо поподробнее обсудить-->
+        <div class="shop-sort-buttoms"
+          <div class="buttom-Descend">
+           <a href="#"></a>
+          </div>
+          <div class="bottom-Ascend">
+           <a href="#"></a>
+          </div>
+        </div>
+      </div>
+      <div class="shop-products">
+        <article class="shop-products-item">
+          <div class="item-header">
+          </div>
+          <div class="item-img">
+            <img src="#" alt="#">
+            <div class="item-inside">
+              <!--На вебинаре рекомендовали оформить текст внутри карточки товара,
+              как заголовок h2 с ссылкой внутри, которая оборачивает два span'на.
+              На мой взгляд h3 тут будет уместнее, и что на счет второй фразы в span?
+              ты по моему говорил, что для span многовато текста, но мне все же кажется что в самый раз :) -->
+              <h3>
+                <a href="#">
+                  <span class="item-inside-title">Sunset</span>
+                  <span class="item-inside-text">Интернет-магазин с личным кабинетом</span>
+                </a>
+              </h3>
+              <a class="btn" href="#">10000 Р.</a>
+            </div>
+          </div>
+        </article>
+        <article class="shop-products-item">
+          <div class="item-header">
+          </div>
+          <div class="item-img">
+            <img src="#" alt="#">
+            <div class="item-inside">
+              <h3>
+                <a href="#">
+                  <span class="item-inside-title">Sunset</span>
+                  <span class="item-inside-text">Интернет-магазин с личным кабинетом</span>
+                </a>
+              </h3>
+              <a class="btn" href="#">10000 Р.</a>
+            </div>
+          </div>
+        </article>
+        <div class="shop-pagination">
+          <ul class="shop-pagination-list">
+            <li class="shop-pagination-list-item"><span>1</span></li>
+            <li class="shop-pagination-list-item"><a href="#">2</a></li>
+            <li class="shop-pagination-list-item"><a href="#">3</a></li>
+            <li class="shop-pagination-list-item"><a href="#">Следующая</a></li>
+          </ul>
+        </div>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="map">
