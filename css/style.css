@@ -30,6 +30,8 @@ h2 {
 
 .page-header {
   padding-bottom: 70px;
+  margin-bottom: 80px;
+  background: #eeeeee;
 }
 
 .header-logo {
@@ -45,25 +47,79 @@ h2 {
 .header-menu {
   float: left;
 }
+
+.header-menu-list>li {
+  display: inline-block;
+}
+
 .header-cart {
   float: right;
 }
+
+.slider {
+  display: none;
+}
+
+.slider-slide-content {
+  display: inline-block;
+}
+
 
 .header-title {
   width: 700px;
   margin: 0 auto;
 }
 
-.header-top::after {
-  content: "";
-  display: table;
-  clear: both;
+.services {
+  margin-bottom: 74px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.services-item {
+  float: left;
+  width: 240px;
+}
+
+.services-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.company-info {
+  margin-bottom: 45px;
+  padding-bottom: 72px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.about-us {
+  width: 620px;
+}
+
+.about-job-col {
+  float: left;
+}
+.about-job-col:first-child {
+  margin-right: 180px;
+}
+
+.partners {
+  margin-bottom: 85px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.partners-item {
+  display: inline-block;
+}
+
+.partners-item:not(:last-child) {
+  margin-right: 100px;
 }
 
 
 .shop-form {
   float: left;
   width: 240px;
+  margin-right: 80px;
 }
 
 .shop-content {
@@ -71,33 +127,64 @@ h2 {
   width: 560px;
 }
 
+.shop-sort {
+  margin-bottom: 21px;
+}
+
+.shop-sort-title {
+  float: left;
+}
+
+.shop-sort-list {
+  float: left;
+}
+
+.shop-sort-item {
+  display: inline-block;
+}
+
+.shop-sort-buttons {
+  float: right;
+}
+
 .shop-products-item {
   display: inline-block;
+  width: 240px;
+  padding: 0 0 0 0;
+  margin-bottom: 80px;
+}
+
+.shop-products-item:not(:nth-child(2n)) {
+  margin-right: 75px;
 }
 
 .item-inside {
   display: none;
 }
 
+.shop-pagination-list-item {
+  display: inline-block;
+}
+
+
+
 .contacts {
   display: none;
 }
 
-.sotital-btns {
+.social-btns {
   float: left;
+  width: 240px;
+  margin-right: 70px;
 }
 
 .footer-promo {
-  float:right;
+  float:left;
 }
 
-.main-footer-bottom::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-main::after {
+
+.clearfix::after {
   content: "";
   display: table;
   clear: both;

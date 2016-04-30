@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <div class="header-top">
+        <div class="header-top clearfix">
           <a class="header-logo" href="#"><img src="img/header-logo.png" alt="Nerds"></a>
           <div class="header-nav">
             <nav class="header-menu">
@@ -57,15 +57,15 @@
           <ul class="shop-form-groups-list"> <!--нужны ли классы для ul и li? на всякий случай сделал. Для radio и checkbox одинаковые, правильно?-->
             <li class="shop-form-groups-item">
               <input type="radio" name="radio-item" value="radio-item1" id="radio-point1"> <!--Можно ли обернуть input в label, что бы не задавать id? или id и все равно будет нужен для других задач?-->
-              <label for="point1">Адаптивная</label>
+              <label for="radio-point1">Адаптивная</label>
             </li>
             <li class="shop-form-groups-item">
               <input type="radio" name="radio-item" value="radio-item2" id="radio-point2">
-              <label for="point2">Фиксированная</label>
+              <label for="radio-point2">Фиксированная</label>
             </li>
             <li class="shop-form-groups-item">
               <input type="radio" name="radio-item" value="radio-item3" id="radio-point3">
-              <label for="point3">Резиновая</label>
+              <label for="radio-point3">Резиновая</label>
             </li>
           </ul>
         </div>
@@ -97,7 +97,7 @@
         <input class="btn" type="submit" value="Показать">
       </form>
       <div class="shop-content">  <!--тут похоже не container должен быть - переименовываю-->
-        <div class="shop-sort">
+        <div class="shop-sort clearfix">
           <b class="shop-sort-title">Сортировать:</b>
           <ul class="shop-sort-list">
             <li class="shop-sort-item"><a href="#">По цене</a></li>
@@ -106,8 +106,8 @@
           </ul>
          <!--Кнопочки надо поподробнее обсудить-->
           <div class="shop-sort-buttons">
-             <a class="sort-button-ascend" href="#"></a>
-             <a class="sort-button-ascend" href="#"></a>
+             <a class="sort-button-down" href="#"></a>
+             <a class="sort-button-up" href="#"></a>
           </div>
         </div>
         <div class="shop-products">
@@ -236,7 +236,7 @@
           </div>
         </div>
       </div>
-      <div class="main-footer-bottom">
+      <div class="main-footer-bottom clearfix">
         <div class="container">
           <div class="social-btns">
             <a href="#" class="social-btn"></a>
