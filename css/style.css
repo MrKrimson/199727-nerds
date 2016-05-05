@@ -1,24 +1,19 @@
+@font-face {
+    font-family: "roboto";
+    src: url("../fonts/robotomedium.woff2") format("woff2"),
+         url("../fonts/robotomedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
-  font-family: "roboto medium";
+  min-width: 900px;
+  font-family: "roboto", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  background: #ffffff
   color: #283136;
-  font-weight: normal;
-
-}
-
-h1 {
-  font-size: 40px;
-  line-height: normal;
-  color: #000000;
-  font-weight: normal;
-}
-
-h2 {
-  font-size: 18px;
-  line-height: 30px;
-  color: #000000;
-  font-weight: normal;
 }
 
 .container {
@@ -26,17 +21,23 @@ h2 {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+
 }
 
 .page-header {
   padding-bottom: 70px;
   margin-bottom: 80px;
   background: #eeeeee;
+  color: #000000;
 }
+
+
 
 .header-logo {
   width: 140px;
+  padding-left: 1px;
   float: left;
+  margin-top: 27px;
 }
 
 .header-nav {
@@ -46,14 +47,48 @@ h2 {
 
 .header-menu {
   float: left;
+  margin-top: 55px;
 }
 
-.header-menu-list>li {
+.header-menu-list {
+margin: 0;
+padding: 0;
+max-width: 460px;
+padding-left: 3px;
+list-style: none;
+font-size: 0;
+}
+
+.header-menu-list li {
   display: inline-block;
+  margin-right: 46px;
+  font-size: 14px;
+  line-height: 30px;
+  vertical-align: top;   /*не понял зачем задавать vertical-align*/
+}
+
+.header-menu-list li:last-child{
+  margin-right: 0px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.header-nav a:hover {
+  color: #fb565a;
 }
 
 .header-cart {
+  display: block;
   float: right;
+  width: 100px;
+  margin-top: 55px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .slider {
@@ -70,6 +105,8 @@ h2 {
   margin: 0 auto;
 }
 
+
+
 .services {
   margin-bottom: 74px;
   padding-bottom: 80px;
@@ -85,6 +122,63 @@ h2 {
   margin-right: 80px;
 }
 
+.services-item-img {
+  margin-bottom: 17px;
+}
+
+.services-item-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.services-item-description {
+  margin:0;
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #283136;
+}
+.btn {
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 12px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+  background: #fb565a;
+}
+
+.btn:hover {
+  background: #d6494d;
+}
+
+.btn--green {
+  background: #00ca74;
+}
+
+.btn--green:hover {
+  background: #01a25e;
+}
+
+.btn--yellow {
+  background: #efc84a;
+}
+
+.btn--yellow:hover {
+  background: #d6ae2c;
+}
+
 .company-info {
   margin-bottom: 45px;
   padding-bottom: 72px;
@@ -95,11 +189,45 @@ h2 {
   width: 620px;
 }
 
+.about-us p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #283136;
+}
+
+.about-us b {
+  display: block;
+  width: 540px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+}
+
 .about-job-col {
   float: left;
+  font-size: 16px;
+  line-height: 22px;
+  color: #283136;
 }
+
 .about-job-col:first-child {
   margin-right: 180px;
+}
+
+.about-job-col h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.about-job-col ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .partners {
