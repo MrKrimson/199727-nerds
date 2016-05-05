@@ -42,18 +42,18 @@ body {
 
 .header-nav {
   width: 560px;
+  margin-top: 55px;
   float: right;
 }
 
 .header-menu {
   float: left;
-  margin-top: 55px;
+  max-width: 460px;
 }
 
 .header-menu-list {
 margin: 0;
 padding: 0;
-max-width: 460px;
 padding-left: 3px;
 list-style: none;
 font-size: 0;
@@ -85,7 +85,6 @@ font-size: 0;
   display: block;
   float: right;
   width: 100px;
-  margin-top: 55px;
   text-align: right;
   font-size: 14px;
   line-height: 30px;
