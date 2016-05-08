@@ -12,7 +12,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  background: #ffffff
+  background: #ffffff;
   color: #283136;
 }
 
@@ -31,7 +31,9 @@ body {
   color: #000000;
 }
 
-
+.header-top {
+  margin-bottom: 63px;
+}
 
 .header-logo {
   width: 140px;
@@ -41,33 +43,29 @@ body {
 }
 
 .header-nav {
-  width: 557px;
+  max-width: 720px;
   margin-top: 55px;
   float: right;
 }
 
 .header-menu {
   float: left;
-  max-width: 405px;
+  max-width: 560px;
 }
 
 .header-menu-list {
-margin: 0;
-padding: 0;
-list-style: none;
-font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
 }
 
 .header-menu-list li {
   display: inline-block;
-  margin-right: 46px;
+  margin-right: 45px;
   font-size: 14px;
   line-height: 30px;
   vertical-align: top;   /*не понял зачем задавать vertical-align*/
-}
-
-.header-menu-list li:last-child{
-  margin-right: 0px;
 }
 
 .header-nav a {
@@ -80,13 +78,38 @@ font-size: 0;
   color: #fb565a;
 }
 
+.header-nav a:active {
+  color: #8f8f8f;
+}
+
 .header-cart {
+  position: relative;
   display: block;
   float: right;
   width: 100px;
+  margin-left: 15px;
   text-align: right;
   font-size: 14px;
   line-height: 30px;
+}
+
+.cart-img {
+  position: absolute;
+  display: block;
+  top: 7px;
+  left: 6px;
+  background-image: url("../img/sprite.png");  background-repeat: no-repeat;
+  background-position: -20px -19px;
+  width: 15px;
+  height: 15px;
+}
+
+.header-cart:hover .cart-img {
+  background-position: -19px -111px;
+}
+
+.header-cart:active .cart-img {
+  background-position: -20px -67px;
 }
 
 .slider {
@@ -103,10 +126,18 @@ font-size: 0;
   margin: 0 auto;
 }
 
+.header-title h1 {
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: normal;
+}
+
 
 
 .services {
-  margin-bottom: 74px;
+  margin-bottom: 60px;
   padding-bottom: 80px;
   border-bottom: 2px solid #eeeeee;
 }
@@ -161,12 +192,22 @@ font-size: 0;
   background: #d6494d;
 }
 
+.btn:active {
+  background: #b63538;
+  box-shadow: inset 0 3px #9b2d30;
+}
+
 .btn--green {
   background: #00ca74;
 }
 
 .btn--green:hover {
   background: #01a25e;
+}
+
+.btn--green:active {
+  background: #009053;
+  box-shadow: inset 0 3px #007b47;
 }
 
 .btn--yellow {
@@ -177,29 +218,71 @@ font-size: 0;
   background: #d6ae2c;
 }
 
+.btn--yellow:active {
+  background: #c09b24;
+  box-shadow: inset 0 3px #a3841f;
+}
+
+
+
 .company-info {
   margin-bottom: 45px;
-  padding-bottom: 72px;
+  padding-bottom: 70px;
   border-bottom: 2px solid #eeeeee;
 }
 
 .about-us {
+  margin-bottom: 25px;
+}
+
+.about-us-col-left {
+  float: left;
   width: 620px;
+  padding-top:;
 }
 
-.about-us p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #283136;
-}
-
-.about-us b {
+.about-us-col-left b {
   display: block;
   width: 540px;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+}
+
+.about-us-col-right {
+  float: right;
+  width: 240px;
+  text-align: center;
+}
+
+.company-info-logo {
+  margin-bottom: 20px;
+}
+
+.about-us-col-right-title {
+  position: relative;
+  text-align: center;
+}
+
+.about-us-col-right-title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 100%;
+  background: #eeeeee;
+  z-index: -1;
+}
+
+.about-us-col-right-title b {
+  display: inline-block;
+  background: #ffffff;
+  padding: 0 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 16px;
 }
 
 .about-job-col {
@@ -209,6 +292,11 @@ font-size: 0;
   color: #283136;
 }
 
+.about-job-col--right {
+  float: right;
+  padding-right: 14px;
+}
+
 .about-job-col:first-child {
   margin-right: 180px;
 }
@@ -216,6 +304,7 @@ font-size: 0;
 .about-job-col h2 {
   padding: 0;
   margin: 0;
+  margin-bottom: 23px;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -228,17 +317,46 @@ font-size: 0;
   list-style: none;
 }
 
+.about-job-col li {
+  position: relative;
+  padding: 0;
+  padding-left: 37px;
+  margin: 0;
+}
+
+.about-job-col li:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.about-job-col li::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background: #fb565a;
+}
+
 .partners {
   margin-bottom: 85px;
   border-bottom: 2px solid #eeeeee;
+  padding-left: 11px;
+  padding-bottom: 25px;
 }
 
 .partners-item {
   display: inline-block;
+  vertical-align: middle;
+  opacity: 0.3;
 }
 
 .partners-item:not(:last-child) {
-  margin-right: 100px;
+  margin-right: 120px;
+}
+
+.partners-item:hover {
+  opacity: 1;
 }
 
 
@@ -259,39 +377,212 @@ font-size: 0;
 
 .shop-sort-title {
   float: left;
+  display: block;
+  margin-right: 40px;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
 }
 
 .shop-sort-list {
   float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .shop-sort-item {
   display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+.shop-sort-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.shop-sort-item a {
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #b2b2b2;
+  border-bottom: 1px dotted #00ca74;
+}
+
+.shop-sort-item a:hover {
+  color: #000000;
+  border-bottom: 1px solid #00ca74;
 }
 
 .shop-sort-buttons {
   float: right;
 }
 
+.shop-sort-button-down {
+  width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+
 .shop-products-item {
   display: inline-block;
   width: 240px;
-  padding: 0 0 0 0;
+  padding: 0;
   margin-bottom: 80px;
+  border-radius: 4px 4px 0 0;
 }
 
 .shop-products-item:not(:nth-child(2n)) {
   margin-right: 75px;
 }
 
+.item-header {
+  position: relative;
+  height: 30px;
+  width: 240px;
+  border-radius: 4px 4px 0 0;
+  background:#797979;
+  opacity: 0.1;
+}
+
+.shop-products-item:hover .item-header {
+  opacity: 1;
+}
+
+.item-header-laps {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  left: 12px;
+}
+
+.item-header-lap {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  margin-right: 4px;
+  background: #ffffff;
+}
+
+.item-img {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -6px;
+}
+
 .item-inside {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   display: none;
+  width: 200px;
+  max-height: 140px; /* задал для того, чтобы не выпадал четверный товар. Или лучше добавить еще одну обертку для всего содержимого item-inside и задать max-height ей?? */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.item-inside h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.item-inside h3>a {
+  display: block;
+  text-decoration: none;
+}
+
+.item-inside-title {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000
+}
+
+.item-inside-text {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #283136;
+}
+
+.btn--product {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.shop-products-item:hover .item-inside{
+  display: block;
+}
+
+.shop-pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .shop-pagination-list-item {
   display: inline-block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 
+
+.shop-pagination-list-item span {
+  display: block;
+  min-width: 34px;
+  height: 24px;
+  border: 2px solid #f1f1f1;
+  border-radius: 2px;
+  padding-top: 10px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.shop-pagination-list-item a {
+  display: block;
+  min-width: 38px;
+  height: 28px;
+  border-radius: 2px;
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  background: #f1f1f1;
+  color: #000000;
+}
+
+.shop-pagination-list-item:last-child a {
+  width: 140px;
+}
+
+.shop-pagination-list-item a:hover {
+  background: #e5e5e5;
+}
+
+.shop-pagination-list-item a:active {
+  background: #d5d5d5;
+  box-shadow: inset 0 3px #b5b5b5;
+
+}
 
 
 .contacts {
@@ -300,12 +591,81 @@ font-size: 0;
 
 .social-btns {
   float: left;
-  width: 240px;
-  margin-right: 70px;
+  max-width: 240px;
+  margin-right: 80px;
+}
+
+.social-btn {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e1e1e1;
+}
+
+.social-btn:not(:last-child) {
+  margin-right: 25px;
+}
+
+.social-btn:hover {
+  background: #fb565a;
+}
+
+.social-btn:active {
+  background: #d6494d;
+  box-shadow: inset 0 3px #b63e42;
+}
+
+.social-btn--vk {
+  position: absolute;
+  top: 23px;
+  left: 17px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -65px -18px;
+  width: 26px;
+  height: 15px;
+}
+
+.social-btn--fb {
+  position: absolute;
+  top: 19px;
+  left: 22px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -69px -55px;
+  width: 12px;
+  height: 22px;
+}
+
+.social-btn--in {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -63px -106px;
+  width: 21px;
+  height: 21px;
 }
 
 .footer-promo {
   float:left;
+}
+
+.footer-promo p {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-promo-title {
+  display:block;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 9px;
 }
 
 
