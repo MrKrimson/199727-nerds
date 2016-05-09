@@ -40,20 +40,18 @@
         h2 сказали не очень подходят...-->
         <div class="shop-form-filter">
           <h2>Стоимость:</h2>
-          <div class="slider">
-            <div class="slider-background">
-              <div class="slider-active-line">
-                <div class="slider-inactive-line"></div> <!--или и той и другой лини задать класс slider-line, а второму добавить еще один класс "active"?-->
-                <div class="circle min"></div> <!--добавил второй класс, правильно? или хватит одного одинакового? или вообще два разных класса надо?-->
-                <div class="circle max"></div>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="margin-left: 0; width: 75%"></div>
               </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
             </div>
-          </div>
-          <div class="shop-form-range">
-            <input type="text" name="name" value="0" id="min">
-            <label for="min">от</label>
-            <input type="text" name="name" value="15000" id="max">
-            <label for="max">до</label>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
           </div>
         </div>
         <div class="shop-form-groups">
