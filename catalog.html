@@ -10,13 +10,13 @@
     <header class="page-header">
       <div class="container">
         <div class="header-top clearfix">
-          <a class="header-logo" href="#"><img src="img/header-logo.png" alt="Nerds"></a>
+          <a class="header-logo" href="index.html"><img src="img/header-logo.png" alt="Nerds"></a>
           <div class="header-nav clearfix">
             <nav class="header-menu">
               <ul class="header-menu-list">
                 <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="#">Магазин</a></li>
+                <li class="menu-item-active"><span>Магазин</span></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
             </nav>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <form class="shop-form" action="index.html" method="post">
         <div class="shop-form-filter">
           <h2>Стоимость:</h2>
@@ -101,9 +101,8 @@
             <li class="shop-sort-item"><a href="#">По типу</a></li>
             <li class="shop-sort-item"><a href="#">По функционалу</a></li>
           </ul>
-         <!--Кнопочки надо поподробнее обсудить-->
           <div class="shop-sort-buttons">
-             <a class="sort-button-down" href="#"></a>
+             <a class="sort-button-down sort-button-active" href="#"></a>
              <a class="sort-button-up" href="#"></a>
           </div>
         </div>
@@ -127,7 +126,7 @@
                   <h3>
                     <a href="#">
                       <span class="item-inside-title">Aviator</span>
-                      <span class="item-inside-text">Одностраничный макет <br>с авторским дизайном</span>
+                      <span class="item-inside-text">Одностраничный макет<br>с авторским дизайном</span>
                     </a>
                   </h3>
                   <a class="btn btn--product" href="#">8000 Р.</a>
@@ -190,7 +189,7 @@
                   <h3>
                     <a href="#">
                       <span class="item-inside-title">Modern organic thai</span>
-                      <span class="item-inside-text">Сайт для ресторана быстрого питания</span>
+                      <span class="item-inside-text">Сайт для ресторана<br>быстрого питания</span>
                     </a>
                   </h3>
                   <a class="btn btn--product" href="#">12000 Р.</a>
@@ -254,28 +253,47 @@
     <footer class="main-footer">
       <div class="map">
         <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6223157709778!2d30.32286932535905!3d59.938286115292975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fc48a615b%3A0x8de51359ce6081aa!2z0JLQvtC70YvQvdGB0LrQuNC5INC_0LXRgC4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1463159661287" width="1200" height="415" frameborder="0" style="border:0; margin: 0 auto;" allowfullscreen></iframe>
           <div class="contacts">
             <h3>Nёrds design studio</h3>
-            <p>191186, Cанкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p>тел. +7(812)275-75-75</p>
-            <a href="#" class="btn">Напишите нам</a>
+            <p>191186, Cанкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <a class="btn btn--contacts" href="#">Напишите нам</a>
           </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6223157709778!2d30.32286932535905!3d59.938286115292975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fc48a615b%3A0x8de51359ce6081aa!2z0JLQvtC70YvQvdGB0LrQuNC5INC_0LXRgC4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1463159661287" width="100%" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="main-footer-bottom clearfix">
         <div class="container">
           <div class="social-btns">
-            <a href="#" class="social-btn"><div class="social-btn--vk"></div></a>
-            <a href="#" class="social-btn"><div class="social-btn--fb"></div></a>
-            <a href="#" class="social-btn"><div class="social-btn--in"></div></a>
+            <a class="social-btn" href="http://vk.com/"><div class="social-btn-vk"></div></a>
+            <a class="social-btn" href="http://facebook.com/"><div class="social-btn-fb"></div></a>
+            <a class="social-btn" href="http://instagram.com/"><div class="social-btn-in"></div></a>
           </div>
           <div class="footer-promo">
             <b class="footer-promo-title">Давайте дружить, это выгодно!</b>
-            <p>Скида 10% для друзей из социальных сетей.</p>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </div>
       </div>
     </footer>
+    <div class="container container--modal">
+      <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <form class="modal-form" action="index.html" method="post">
+          <div class="modal-form-block">
+            <label for="form-name">Ваше имя:</label>
+            <input class="modal-form-text" id="form-name" type="text" name="name" value="Представьтесь, пожалуйста">
+          </div>
+          <div class="modal-form-block">
+            <label for="form-email">Ваш e-mail:</label>
+            <input class="modal-form-text" id="form-email" type="email" name="email" value="Для отправки ответа">
+          </div>
+          <label for="form-letter">Текст письма:</label>
+          <textarea class="modal-form-text modal-form-text--letter" id="form-letter" name="letter">В свободной форме</textarea>
+          <input class="btn brn--modal" type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

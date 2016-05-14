@@ -66,7 +66,12 @@ body {
   vertical-align: top;
 }
 
-.header-nav a {
+.menu-item-active {
+  border-bottom: 2px solid #fb565a;
+}
+
+.header-nav a,
+.header-nav span {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
@@ -659,6 +664,15 @@ input[type="checkbox"]:checked + label:hover::before {
   color: #000000;
 }
 
+.form-btn:hover {
+  background: #e5e5e5;
+}
+
+.form-btn:active {
+  background: #d5d5d5;
+  box-shadow: inset 0 3px #b5b5b5;
+}
+
 
 .shop-content {
   float: right;
@@ -719,6 +733,45 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .shop-sort-buttons {
   float: right;
+}
+
+.shop-sort-buttons a {
+  display: inline-block;
+}
+
+.sort-button-down {
+  width: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #c1c1c1;
+}
+
+.sort-button-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #c1c1c1;
+}
+
+.sort-button-active {
+  border-top: 10px solid #00ca74;
+}
+
+.sort-button-down:hover {
+  border-top: 10px solid #b5b5b5;
+}
+
+.sort-button-up:hover {
+  border-bottom: 10px solid #b5b5b5;
+}
+
+.sort-button-down:active {
+  border-top: 10px solid #000000;
+}
+
+.sort-button-up:active {
+  border-bottom: 10px solid #000000;
 }
 
 .shop-sort-button-down {
@@ -786,7 +839,7 @@ input[type="checkbox"]:checked + label:hover::before {
   left: 20px;
   display: none;
   width: 200px;
-  max-height: 140px; /* задал для того, чтобы не выпадал четверный товар. Или лучше добавить еще одну обертку для всего содержимого item-inside и задать max-height ей?? */
+  height: 140px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -822,6 +875,9 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .btn--product {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
   font-size: 18px;
   line-height: 18px;
 }
@@ -883,17 +939,52 @@ input[type="checkbox"]:checked + label:hover::before {
   box-shadow: inset 0 3px #b5b5b5;
 }
 
+.map .container {
+  position: relative;
+}
 
 .contacts {
-  display: none;
+  position: absolute;
+  top: 88px;
+  width:230px;
+  height: 215px;
+  padding-top: 25px;
+  padding-left: 20px;
+  background: #ffffff;
 }
 
-.map {
-  margin-bottom: 78px;
+.contacts h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 30px;
+  text-transform: uppercase;
 }
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #666666;
+}
+
+.btn--contacts {
+  position: absolute;
+  left: 23px;
+  bottom: 26px;
+  padding: 0;
+  width: 204px;
+  height: 38px;
+  font-size: 12px;
+  line-height: 38px;
+  text-align: center;
+}
+
 
 .main-footer-bottom {
-  margin-bottom: 78px;
+  padding: 75px 0;
 }
 
 .social-btns {
@@ -924,7 +1015,7 @@ input[type="checkbox"]:checked + label:hover::before {
   box-shadow: inset 0 3px #b63e42;
 }
 
-.social-btn--vk {
+.social-btn-vk {
   position: absolute;
   top: 23px;
   left: 17px;
@@ -935,7 +1026,7 @@ input[type="checkbox"]:checked + label:hover::before {
   height: 15px;
 }
 
-.social-btn--fb {
+.social-btn-fb {
   position: absolute;
   top: 19px;
   left: 22px;
@@ -946,7 +1037,7 @@ input[type="checkbox"]:checked + label:hover::before {
   height: 22px;
 }
 
-.social-btn--in {
+.social-btn-in {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -976,6 +1067,111 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 
+.container--modal {
+  position: relative;
+}
+
+.modal-content {
+  display: none;
+  position: absolute;
+  left: 125px;
+  bottom: 250px;
+  padding-top: 56px;
+  padding-left: 80px;
+  width: 550px;
+  min-height: 360px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px 5px rgba(0, 1, 1, 0.75);
+}
+
+.modal-content-show {
+  display: block;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 41px;
+  height: 41px;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+  background: #fb565a;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  width: 26px;
+  height: 5px;
+  border-radius: 1px;
+  background: #ffffff;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-form-block {
+  display: inline-block;
+  margin-right: 18px;
+  margin-bottom: 20px;
+  font-size: 0px;
+}
+
+.modal-form label {
+  display: block;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.modal-form-text {
+  width: 202px;
+  height: 34px;
+  border: 2px solid #f1f1f1;
+  border-radius: 2px;
+  padding-left: 13px;
+  font-family: "roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  vertical-align: top;
+  background: #ffffff;
+  color: #000000;
+}
+
+.modal-form-text--letter {
+  width: 443px;
+  height: 100px;
+  padding-top: 10px;
+  margin-bottom: 48px;
+  resize: none;
+}
+
+.brn--modal {
+  width: 460px;
+  border: none;
+  border-radius: 4px/2px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 49px;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+}
 
 .clearfix::after {
   content: "";
