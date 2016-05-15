@@ -1146,6 +1146,7 @@ input[type="checkbox"]:checked + label:hover::before {
   border: 2px solid #f1f1f1;
   border-radius: 2px;
   padding-left: 13px;
+  padding-right: 13px;
   font-family: "roboto", "Arial", sans-serif;
   font-weight: 500;
   font-size: 12px;
