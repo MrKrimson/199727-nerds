@@ -30,7 +30,7 @@ body {
 }
 
 .header-top {
-  margin-bottom: 63px;
+  /*margin-bottom: 63px;*/
 }
 
 .header-logo {
@@ -120,6 +120,7 @@ body {
     width:880px;
     height:310px;
     margin:0 auto;
+    margin-top: 40px;
 }
 .slider input[type=radio] {
     position:absolute;
@@ -167,7 +168,7 @@ body {
 }
 .slider-slide-title {
     display: block;
-    margin-bottom: 22px;
+    margin-bottom: 17px;
     font-size:36px;
     line-height:1;
     font-weight: normal;;
@@ -176,7 +177,7 @@ body {
 
 .slider-slide-description {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .slider-slide .btn {
@@ -220,7 +221,8 @@ body {
 .header-title {
   width: 700px;
   margin: 0 auto;
-  padding-bottom: 70px;
+  padding-bottom: 55px;
+  margin-top: 60px;
 }
 
 .header-title h1 {
@@ -273,7 +275,7 @@ body {
 .btn {
   display: inline-block;
   padding-top: 11px;
-  padding-bottom: 12px;
+  padding-bottom: 9px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 3px;
@@ -329,18 +331,23 @@ body {
 }
 
 .about-us {
-  margin-bottom: 25px;
+  margin-bottom: 46px;
 }
 
 .about-us-col-left {
   float: left;
   width: 620px;
-  padding-top:;
+  margin-top: 10px;
+}
+
+.about-us-col-left p {
+  margin: 0px;
 }
 
 .about-us-col-left b {
   display: block;
   width: 540px;
+  margin-bottom: 15px;
   font-weight: 500;
   font-size: 36px;
   line-height: 36px;
@@ -401,7 +408,7 @@ body {
 .about-job-col h2 {
   padding: 0;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -422,7 +429,7 @@ body {
 }
 
 .about-job-col li:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .about-job-col li::after {
@@ -449,7 +456,7 @@ body {
 }
 
 .partners-item:not(:last-child) {
-  margin-right: 120px;
+  margin-right: 118px;
 }
 
 .partners-item:hover {
@@ -475,7 +482,8 @@ body {
 }
 
 .shop-form-filter {
-  margin-bottom: 43px;
+  margin-top: -4px;
+  margin-bottom: 44px;
 }
 
 .range-filter {
@@ -488,7 +496,7 @@ body {
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   border-radius: 5px;
   background: #f1f1f1;
 }
@@ -555,7 +563,7 @@ body {
 }
 
 .shop-form-groups {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .shop-form-groups-list {
@@ -565,7 +573,7 @@ body {
 }
 
 .shop-form-groups-item {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 input[type="radio"] {
@@ -654,11 +662,15 @@ input[type="checkbox"]:checked + label:hover::before {
   display: block;
   border: none;
   cursor: pointer;
-  width: 140px;
+  width: 156px;
   height: 38px;
+  margin-top: 60px;
   border-radius: 2px;
+  font-size: 12px;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   letter-spacing: 0;
   background: #f1f1f1;
   color: #000000;
@@ -677,7 +689,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .shop-content {
   float: right;
   width: 560px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
 }
 
 .shop-sort {
@@ -741,6 +753,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .sort-button-down {
   width: 0;
+  margin-right: 3px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 10px solid #c1c1c1;
@@ -774,13 +787,6 @@ input[type="checkbox"]:checked + label:hover::before {
   border-bottom: 10px solid #000000;
 }
 
-.shop-sort-button-down {
-  width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid red;
-}
 
 .shop-products-item {
   display: inline-block;
@@ -895,7 +901,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .shop-pagination-list-item {
   display: inline-block;
   margin: 0;
-  margin-left: 7px;
+  margin-right: 7px;
   font-size: 12px;
   line-height: 18px;
   text-transform: uppercase;
@@ -984,7 +990,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 
 .main-footer-bottom {
-  padding: 75px 0;
+  padding: 70px 0;
 }
 
 .social-btns {
@@ -1029,7 +1035,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .social-btn-fb {
   position: absolute;
   top: 19px;
-  left: 22px;
+  left: 24px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -69px -55px;
@@ -1075,7 +1081,7 @@ input[type="checkbox"]:checked + label:hover::before {
   display: none;
   position: absolute;
   left: 125px;
-  bottom: 250px;
+  bottom: 255px;
   padding-top: 56px;
   padding-left: 80px;
   width: 550px;
