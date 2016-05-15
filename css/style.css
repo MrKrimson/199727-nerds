@@ -670,6 +670,7 @@ input[type="checkbox"]:checked + label:hover::before {
   letter-spacing: 0;
   background: #f1f1f1;
   color: #000000;
+  outline: none;
 }
 
 .form-btn:hover {
@@ -1151,8 +1152,17 @@ input[type="checkbox"]:checked + label:hover::before {
   line-height: 18px;
   text-transform: uppercase;
   vertical-align: top;
+  outline: none;
   background: #ffffff;
   color: #000000;
+}
+
+.modal-form-text:hover {
+  border: 2px solid #a2a9ac;
+}
+
+.modal-form-text:focus {
+  border: 2px solid #56bffb;
 }
 
 .modal-form-text--letter {
@@ -1173,6 +1183,7 @@ input[type="checkbox"]:checked + label:hover::before {
   font-weight: normal;
   text-align: center;
   cursor: pointer;
+  outline: none;
 }
 
 .clearfix::after {
