@@ -1081,6 +1081,7 @@ input[type="checkbox"]:checked + label:hover::before {
   bottom: 255px;
   padding-top: 56px;
   padding-left: 80px;
+  padding-bottom: 49px;
   width: 550px;
   min-height: 360px;
   background: #ffffff;
@@ -1173,18 +1174,36 @@ input[type="checkbox"]:checked + label:hover::before {
   resize: none;
 }
 
-.brn--modal {
+.btn--modal {
   width: 460px;
   border: none;
   border-radius: 4px/2px;
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 49px;
   font-weight: normal;
   text-align: center;
   cursor: pointer;
   outline: none;
 }
+
+input::-moz-placeholder {
+    color:#666;
+}
+
+input::-webkit-input-placeholder {
+    color:#666;
+}
+
+/ IE 10 only /
+input:-ms-input-placeholder {
+    color:#666;
+}
+
+/ Firefox 18 and below /
+input:-moz-input-placeholder {
+    color:#666;
+}
+
 
 .clearfix::after {
   content: "";
