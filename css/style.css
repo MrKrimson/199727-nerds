@@ -1247,7 +1247,6 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .item-header-lap {
   display: inline-block;
-  vertical-align:top;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1283,7 +1282,7 @@ input[type="checkbox"]:checked + label:hover::before {
   font-weight: 500;
 }
 
-.item-inside h3>a {
+.item-inside-content a {
   display: block;
   text-decoration: none;
 }
@@ -1372,6 +1371,7 @@ input[type="checkbox"]:checked + label:hover::before {
 
 .map {
   height: 415px;
+  background-color: #e9e5dc;
   background-image: url(../img/map.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -1583,10 +1583,18 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .modal-content-close::before {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .modal-content-close::after {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform: rotate(-45deg);
 }
 
